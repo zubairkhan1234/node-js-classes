@@ -5,8 +5,9 @@ var bodyParser = require('body-parser')
 var mongoose = require('mongoose')
 
 
-let dbURI = "mongodb+srv://zubairabc:zubairabc@cluster0.9qvbs.mongodb.net/testdatabase";
+// let dbURI = "mongodb+srv://zubairabc:zubairabc@cluster0.9qvbs.mongodb.net/testdatabase";
 // let dbURI = 'mongodb://localhost:27017/abc-database';
+let dbURI = "mongodb+srv://zubairabc:zubairabc@cluster0.j83vk.mongodb.net/testdatabase?retryWrites=true&w=majority"
 
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -19,7 +20,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
 
 
 mongoose.connection.on('connected', function () {
-    console.log("Mongoose is connectes")
+    console.log("Mongoose is connected")
 
 })
 
